@@ -1,3 +1,15 @@
+
+# Steps for sharable group
+
+1. Add Group table
+2. Create group for owner (after signup?)
+3. Group id added to Todo
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

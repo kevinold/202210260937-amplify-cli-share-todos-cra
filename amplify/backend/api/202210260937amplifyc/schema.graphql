@@ -1,8 +1,15 @@
+type TodoGroup
+  @model
+  @auth(rules: [{ allow: owner }])
+{ 
+  id: ID!
+  name: String
+}
 type Todo
-  @model # Creates a DynamoDB table
-  @auth(rules: [{ allow: owner, ownerField: "owners"}]) # Sets up owner-based authorization
+  @model
+  @auth(rules: [{ allow: owner }, { allow: groups, groupsField: "group"}]) 
 { 
   id: ID!
   content: String
-  owners: [String] # Use a String array type to configure multi-owner authorization
+  group: String
 }
