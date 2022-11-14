@@ -48,7 +48,11 @@
               "userPoolId": "auth202210260937amplifyc0bce59ae"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
         }
       }
     }

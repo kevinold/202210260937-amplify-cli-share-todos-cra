@@ -1,6 +1,9 @@
 type Todo
   @model # Creates a DynamoDB table
-  @auth(rules: [{ allow: owner, ownerField: "owners"}]) # Sets up owner-based authorization
+  @auth(rules: [
+    { allow: owner, ownerField: "owners"}, # Sets up owner-based authorization
+    { allow: private, provider: iam }
+  ])
 { 
   id: ID!
   content: String
