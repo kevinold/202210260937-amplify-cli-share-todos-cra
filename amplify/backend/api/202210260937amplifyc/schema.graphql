@@ -1,9 +1,21 @@
+# Original schema
+# type Todo
+#   @model # Creates a DynamoDB table
+#   @auth(rules: [{ allow: owner, ownerField: "owners"}]) # Sets up owner-based authorization
+# { 
+#   id: ID!
+#   content: String
+#   owners: [String] # Use a String array type to configure multi-owner authorization
+# }
+
+
 type TodoGroup
   @model
-  @auth(rules: [{ allow: owner }])
+  @auth(rules: [{ allow: owner}, { allow: owner, ownerField: "owners" }, { allow: private, provider: iam }])
 { 
   id: ID!
   name: String
+  owners: [String]
 }
 type Todo
   @model

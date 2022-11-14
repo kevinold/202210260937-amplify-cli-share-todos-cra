@@ -1,8 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
     "auth": {
         "202210260937amplifyc0bce59ae": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string",
             "UserPoolId": "string",
             "UserPoolArn": "string",
             "UserPoolName": "string",
@@ -14,6 +12,14 @@ export type AmplifyDependentResourcesAttributes = {
         "202210260937amplifyc": {
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "function": {
+        "202210260937amplifyc0bce59aePreTokenGeneration": {
+            "Name": "string",
+            "Arn": "string",
+            "LambdaExecutionRole": "string",
+            "Region": "string"
         }
     }
 }

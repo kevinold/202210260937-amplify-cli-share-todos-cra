@@ -17,6 +17,9 @@
       },
       "api": {
         "202210260937amplifyc": {}
+      },
+      "function": {
+        "202210260937amplifyc0bce59aePreTokenGeneration": {}
       }
     }
   }

@@ -3,7 +3,17 @@
     "202210260937amplifyc0bce59ae": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "202210260937amplifyc0bce59aePreTokenGeneration",
+          "triggerProvider": "Cognito",
+          "attributes": [
+            "Arn",
+            "Name"
+          ]
+        }
+      ],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
@@ -51,6 +61,13 @@
           "additionalAuthenticationProviders": []
         }
       }
+    }
+  },
+  "function": {
+    "202210260937amplifyc0bce59aePreTokenGeneration": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }
